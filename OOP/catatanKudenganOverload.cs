@@ -37,8 +37,19 @@ public class Program
 	public static void diaryMain()
 	{
 		bool jalanDiary = true;
-
-		Diary diary = new Diary();
+		Console.WriteLine("Ingin atur judul dan penulis diary sekarang?");
+		Console.WriteLine("1 > Ya");
+		Console.WriteLine("2 > Nanti");
+		int pilihanAwalD = int.Parse(Console.ReadLine());
+		if (pilihanAwalD == 1){
+			Console.Write("Judul Diary? ")
+			string judulDiaryVal = Console.ReadLine();
+			Console.Write("Penulis Diary? ")
+			string penulisDiaryVal = Console.ReadLine();
+			Diary diary = new Diary(judulDiaryVal, penulisDiaryVal);
+		} else {
+			Diary diary = new Diary();
+		}
 		while (jalanDiary)
 		{
 			diary.cetak();
@@ -91,6 +102,19 @@ public class Program
 	}
 
     public static void kasMain(){
+		Console.WriteLine("Ingin atur judul dan admin kas sekarang?");
+		Console.WriteLine("1 > Ya");
+		Console.WriteLine("2 > Nanti");
+		int pilihanAwalK = int.Parse(Console.ReadLine());
+		if (pilihanAwalK == 1){
+			Console.Write("Judul Kas? ")
+			string judulKasVal = Console.ReadLine();
+			Console.Write("Penulis Kas? ")
+			string penulisKasVal = Console.ReadLine();
+			Kas kas = new Kas(judulKasVal, penulisKasVal);
+		} else {
+			Kas kas = new Kas();
+		}
         Kas kas = new Kas();
         string keterangan = "";
 
